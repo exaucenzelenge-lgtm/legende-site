@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, viewport-fit=cover">
+    <meta name="description" content="ROCK M - Artiste Musicien">
+    <meta name="theme-color" content="#f5b81b">
+    <title>ROCK M | Artiste Musicien</title>
+    {% load static %}
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="manifest" href="{% static 'manifest.json' %}">
+    <link rel="apple-touch-icon" href="{% static 'image/icon-192.png' %}">
+</head>
+<body>
+
+
+    <!--======FONT D"ECRAN=====-->
+<div class="bg-wallpaper"></div>
+
+<!-- ========== PARTICULES ========== -->
+<div class="particles" id="particles"></div>
+
+<!-- ========== TOAST ========== -->
+<div id="toast" class="toast"></div>
+
+<!-- ========== MODAL GALERIE ========== -->
+<div class="modal-overlay" id="galleryModal">
+    <div class="modal-content">
+        <button class="modal-close" id="modalClose">&times;</button>
+        <img id="modalImage" src="" alt="Galerie">
+    </div>
+</div>
+
+<!-- ========== POPUP MUSIQUE ========== -->
+<div class="music-popup" id="musicPopup">
+    <div class="music-popup-content">
+        <button class="music-popup-close" id="musicPopupClose">&times;</button>
+        <h2>🎵 Écouter ROCK M</h2>
+        <p>Disponible sur toutes les plateformes</p>
+        <div class="music-grid" id="musicGrid"></div>
+    </div>
+</div>
+
+<!-- ========== CONTENU PRINCIPAL ========== -->
+<div class="container">
+
+    <!-- TOP BAR -->
+    <header class="top-bar">
+        <div class="logo">ROCK <span>M</span></div>
+        <nav class="nav-links">
+            <a href="#bio">Bio</a>
+            <a href="#gallery">Galerie</a>
+            <a href="#social">Réseaux</a>
+            <button class="btn-outline" id="listenBtn"><i class="fas fa-headphones"></i> Écouter</button>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        
+        <div class="hero-left">
+            <div class="hero-badge"><i class="fas fa-music"></i> Nouveau single "OCEAN"</div>
+            <h1><span class="gold">ROCK</span> M</h1>
+            <p class="subtitle">✦ Roi Lion ✦</p>
+            <p class="tagline">
+                Rock M lover est un artiste chanteur interprète et performer originaire de la RDC surnommé le "roi lion". Il incarne une identité artistique forte basée sur la puissance vocale, l'énergie scénique et un style musical inspiré de l'afro, du R&B et des sonorités modernes africaines.
+            </p>
+            <div class="hero-buttons">
+                <button class="btn-primary" id="playBtn"><i class="fas fa-play"></i> Écouter "OCEAN"</button>
+                <a href="#music" class="btn-outline"><i class="fas fa-music"></i> Toute la musique</a>
+            </div>
+        </div>
+        <div class="hero-right">
+            <div class="hero-image">
+                <div class="frame">
+                    <!-- ⭐ MODIFIEZ ICI : PHOTO PRINCIPALE ⭐ -->
+                    <img src="{% static 'image/IMG-20260602-WA0004.jpg' %}" alt="ROCK M">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section id="music">
+        <h2 class="section-title center">🎵 Ma Musique</h2>
+        <div class="feature-grid">
+            <a href="#" class="feature-card" id="listenCard">
+                <div class="icon">🎵</div>
+                <h3>Nouveau Single</h3>
+                <p>"OCEAN" - Écoutez maintenant</p>
+            </a>
+            <a href="#gallery" class="feature-card">
+                <div class="icon">📸</div>
+                <h3>Galerie</h3>
+                <p>Plongez dans l'univers visuel</p>
+            </a>
+            <a href="#social" class="feature-card">
+                <div class="icon">🌍</div>
+                <h3>Réseaux</h3>
+                <p>Suivez-moi partout</p>
+            </a>
+        </div>
+    </section>
+
+    <!-- BIOGRAPHIE -->
+    <section class="bio-section" id="bio">
+        <div class="bio-text">
+            <h2 class="section-title">Biographie</h2>
+            <p>
+                <strong>ROCK M</strong>, de son vrai nom <strong>Rock M lover</strong>, est un artiste chanteur, interprète et performer originaire de la <strong>République Démocratique du Congo</strong>, surnommé le <strong>"roi lion"</strong>.
+            </p>
+            <div class="quote">
+                "La musique est ma voix, l'énergie ma signature, l'amour mon message."
+            </div>
+            <p>
+                Il incarne une identité artistique forte basée sur la puissance vocale, l'énergie scénique et un style musical inspiré de l'afro, du R&B et des sonorités modernes africaines.
+            </p>
+            <p style="margin-top:1rem;">
+                <strong>🎤 2025</strong> — Le single "OCEAN" annonce un nouveau chapitre de sa carrière.
+            </p>
+        </div>
+        <div class="bio-image">
+            <!-- ⭐ MODIFIEZ ICI : PHOTO BIO ⭐ -->
+            <img src="{% static 'image/IMG-20260602-WA0004.jpg' %}" alt="ROCK M Bio">
+        </div>
+    </section>
+
+    <!-- GALERIE -->
+    <section id="gallery">
+        <h2 class="section-title center">📸 Galerie Visuelle</h2>
+        <p style="text-align:center; color:var(--text-muted); margin-bottom:1rem;">Cliquez sur une image pour l'agrandir</p>
+        <div class="gallery-grid" id="galleryGrid"></div>
+    </section>
+
+    <!-- SOCIAL -->
+    <section class="social-section" id="social">
+        <h2 class="section-title center">🌍 Suivez-moi</h2>
+        <p style="text-align:center; color:var(--text-muted); margin-bottom:1rem;">
+            Retrouvez-moi sur tous mes réseaux sociaux
+        </p>
+        <div class="social-icons" id="socialIcons"></div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="newsletter-box">
+        <h3>📬 Restez connecté</h3>
+        <p>Recevez les actualités, les sorties et les dates de concert</p>
+        <form class="newsletter-form" id="newsletterForm">
+            <input type="email" id="newsletterEmail" placeholder="Votre adresse email" required>
+            <button type="submit" id="newsletterBtn">S'abonner</button>
+        </form>
+        <p style="margin-top:1rem; font-size:0.7rem; color:var(--text-muted);" id="newsletterStatus">
+            ✦ Aucun spam, désabonnement à tout moment
+        </p>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div>
+            <p>© 2025 ROCK M · Tous droits réservés</p>
+            <p style="font-size:0.7rem; margin-top:0.2rem;">
+                <a href="#" class="manager" id="managerLink"><i class="fas fa-user-tie"></i> Manager : contact@rockm-music.com</a>
+            </p>
+        </div>
+        <div class="footer-links">
+            <a href="#">Mentions légales</a>
+            <a href="#">CGU</a>
+            <a href="#">Presse</a>
+        </div>
+        <button class="btn-outnow" id="outNowBtn">
+            <i class="fas fa-bell"></i> <span class="bell-icon">🔔</span> OUT NOW "OCEAN"
+        </button>
+    </footer>
+</div>
+
+<!-- ========== JAVASCRIPT ========== -->
+<script src="{% static 'js/script.js' %}"></script>
+
+<!-- ========== SERVICE WORKER ========== -->
+<script>
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('{% static "sw.js" %}')
+            .then(function(registration) {
+                console.log('✅ Service Worker enregistré:', registration);
+            })
+            .catch(function(error) {
+                console.error('❌ Erreur Service Worker:', error);
+            });
+    }
+</script>
+
+</body>
+</html>
