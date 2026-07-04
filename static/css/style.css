@@ -152,7 +152,7 @@ body {
     transition: 0.3s;
     box-shadow: 0 5px 15px rgba(245,184,27,0.3);
 }
-.modal-close:hover { transform: scale(1.1) rotate(90deg); }
+.modal-close:hover { transform: scale(1.1) rotate(90deg); } 
 
 /* ========== POPUP MUSIQUE ========== */
 .music-popup {
@@ -240,7 +240,7 @@ body {
     border-radius: 60px;
     border: 1px solid var(--border-gold);
     margin-bottom: 3rem;
-    box-shadow: 0 8px 30px rgba(79, 246, 2, 0.968);
+    box-shadow: 0 8px 30px rgba(24, 29, 21, 0.968);
 }
 .logo {
     font-family: 'Playfair Display', serif;
