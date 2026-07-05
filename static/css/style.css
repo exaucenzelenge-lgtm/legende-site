@@ -235,12 +235,12 @@ body {
     flex-wrap: wrap;
     gap: 1rem;
     padding: 1.8rem 1.5rem;
-    background: rgba(239, 11, 11, 0.02);
+    background: rgb(239, 11, 11, 0.02);
     backdrop-filter: blur(20px);
     border-radius: 60px;
     border: 1px solid var(--border-gold);
     margin-bottom: 3rem;
-   /* box-shadow: 0 8px 30px rgba(24, 29, 21, 0.968);*/
+    box-shadow: 0 8px 30px rgb(24, 29, 21, 0.968);
 }
 .logo {
     font-family: 'Playfair Display', serif;
