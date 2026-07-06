@@ -33,12 +33,12 @@ function showToast(message, type = 'info') {
 // ⭐ LIENS MUSIQUE - MODIFIEZ ICI ⭐
 // ============================================================
 const musicLinks = [
-    { name: "Spotify", url: "https://open.spotify.com/artist/votre-id", icon: "fab fa-spotify", color: "#1DB954" },
+    { name: "Spotify", url: "https://open.spotify.com/artist/31g3swbxioyacmowlu2piopbvlfu?si=ZxwJ3gFtSIKbt6ihm", icon: "fab fa-spotify", color: "#1DB954" },
     { name: "Apple Music", url: "https://music.apple.com/artist/votre-id", icon: "fab fa-apple", color: "#FA243C" },
-    { name: "YouTube Music", url: "https://music.youtube.com/channel/votre-id", icon: "fab fa-youtube", color: "#FF0000" },
-    { name: "Deezer", url: "https://www.deezer.com/artist/votre-id", icon: "fab fa-deezer", color: "#A238FF" },
-    { name: "Audiomack", url: "https://audiomack.com/votre-nom", icon: "fas fa-headphones", color: "#FF6B00" },
-    { name: "Boomplay", url: "https://www.boomplay.com/artists/votre-id", icon: "fas fa-music", color: "#00BFA5" }
+    { name: "YouTube Music", url: "https://music.youtube.com/channel/@rockmofficiel7819?si=3kbOCcVO-v8CI9fw", icon: "fab fa-youtube", color: "#FF0000" },
+    { name: "Deezer", url: "https://www.deezer.com/artist/", icon: "fab fa-deezer", color: "#A238FF" },
+    { name: "Audiomack", url: "https://audiomack.com/", icon: "fas fa-headphones", color: "#FF6B00" },
+    { name: "Boomplay", url: "https://www.boomplay.com/artists/186687330?srModel=COPYLINK&srList=ANDOID", icon: "fas fa-music", color: "#00BFA5" }
 ];
 
 const musicGrid = document.getElementById('musicGrid');
@@ -91,15 +91,15 @@ if (musicPopup) {
 // ⭐ RÉSEAUX SOCIAUX - MODIFIEZ ICI ⭐
 // ============================================================
 const socialLinks = [
-    { name: "Instagram", url: "https://instagram.com/votre-compte", icon: "fa-instagram", color: "#E4405F" },
-    { name: "TikTok", url: "https://tiktok.com/@votre-compte", icon: "fa-tiktok", color: "#000000" },
+    { name: "Instagram", url: "https://instagram.com/official_rock_m/profilecard/?igsh=MTMxM2ExZnVpejY2aA==", icon: "fa-instagram", color: "#E4405F" },
+    { name: "TikTok", url: "https://tiktok.com/@rockmloveman?_t=ZM-8yvMGDIOhN7&_r=1", icon: "fa-tiktok", color: "#000000" },
     { name: "Snapchat", url: "https://snapchat.com/add/votre-compte", icon: "fa-snapchat-ghost", color: "#FFFC00" },
-    { name: "Facebook", url: "https://facebook.com/votre-compte", icon: "fa-facebook-f", color: "#1877F2" },
-    { name: "YouTube", url: "https://youtube.com/@votre-compte", icon: "fa-youtube", color: "#FF0000" },
+    { name: "Facebook", url: "https://facebook.com/profile.php?id=100075870745925", icon: "fa-facebook-f", color: "#1877F2" },
+    { name: "YouTube", url: "https://youtube.com/@rockmofficiel7819?si=3kbOCcVO-v8CI9fw", icon: "fa-youtube", color: "#FF0000" },
     { name: "X (Twitter)", url: "https://twitter.com/votre-compte", icon: "fa-x-twitter", color: "#000000" },
-    { name: "WhatsApp", url: "https://wa.me/243XXXXXXXXX", icon: "fa-whatsapp", color: "#25D366" },
-    { name: "Spotify", url: "https://open.spotify.com/artist/votre-id", icon: "fa-spotify", color: "#1DB954" },
-    { name: "Threads", url: "https://threads.net/@votre-compte", icon: "fa-threads", color: "#000000" }
+    { name: "WhatsApp", url: "https://wa.me/243810430353", icon: "fa-whatsapp", color: "#25D366" },
+    { name: "Spotify", url: "https://open.spotify.com/artist/31g3swbxioyacmowlu2piopbvlfu?si=ZxwJ3gFtSIKbt6ihm", icon: "fa-spotify", color: "#1DB954" },
+    { name: "Threads", url: "https://threads.net/@official_rock_m", icon: "fa-threads", color: "#000000" }
 ];
 
 const socialContainer = document.getElementById('socialIcons');
@@ -121,10 +121,16 @@ if (socialContainer) {
 // GALERIE
 // ============================================================
 const galleryImages = [
-    '🎤', '🎵', '🎶', '🎹', '🎸', '🎧', '🎭', '🌟',
-    '🎵', '🎤', '🎶', '🎹', '🎸', '🎧', '🎭', '🌟',
-    '🎤', '🎵', '🎶', '🎹', '🎸', '🎧', '🎭', '🌟',
-    '🎵', '🎤', '🎶', '🎹', '🎸', '🎧'
+    '/static/image/IMG-20260703-WA0026.jpg',
+    '/static/image/IMG-20260703-WA0027.jpg',
+    '/static/image/IMG-20260703-WA0028.jpg',
+    '/static/image/IMG-20260703-WA0029.jpg',
+    '/static/image/IMG-20260703-WA0030.jpg',
+    '/static/image/IMG-20260703-WA0031.jpg',
+    '/static/image/IMG-20260703-WA0032.jpg',
+    '/static/image/IMG-20260703-WA0033.jpg',
+    '/static/image/IMG-20260703-WA0034.jpg',
+    '/static/image/IMG-20260703-WA0035.jpg'
 ];
 
 const galleryContainer = document.getElementById('galleryGrid');
@@ -252,7 +258,7 @@ document.querySelectorAll('.feature-card, .bio-section, .gallery-grid, .newslett
 });
 document.getElementById('whatsappBtn').addEventListener('click', function() {
     const message = `Bonjour ROCK M, je suis intéressé(e) par votre musique !`;
-    window.open(`https://wa.me/243999888777?text=${encodeURIComponent(message)}`, '_blank');
+    window.open(`https://wa.me/243810430353?text=${encodeURIComponent(message)}`, '_blank');
 });
 
 console.log('🎵 ROCK M - Page chargée avec succès !');

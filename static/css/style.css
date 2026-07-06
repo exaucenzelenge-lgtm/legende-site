@@ -240,7 +240,7 @@ body {
     border-radius: 60px;
     border: 1px solid var(--border-gold);
     margin-bottom: 3rem;
-    box-shadow: 0 8px 30px rgb(24, 29, 21, 0.968);
+    box-shadow: 0 8px 30px rgba(27, 40, 19, 0.968);
 }
 .logo {
     font-family: 'Playfair Display', serif;
@@ -363,7 +363,7 @@ body {
 }
 .btn-primary:hover {
     transform: translateY(-3px);
-    box-shadow: 0 12px 30px rgba(255, 184, 4, 0.527);
+    box-shadow: 0 12px 30px rgba(37, 33, 24, 0.527);
 }
 
 /* ========== PHOTO HERO ========== */
@@ -376,10 +376,10 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
+    position: static;
     margin: 0 auto;
     overflow: hidden;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+    box-shadow: 0 20px 60px rgba(38, 40, 36, 0.696);
 }
 .hero-image .frame img {
     width: 100%;
